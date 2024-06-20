@@ -7,7 +7,6 @@ import { Faq } from "./components/Home/faq";
 import { Team } from "./components/Home/team";
 import { Contacts } from "./components/Home/contacts";
 import Header from "./components/Home/Header";
-import Policy from './policy/page'
 import { Footer } from "./components/Home/footer";
 
 export default function Home() {
