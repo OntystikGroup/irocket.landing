@@ -5,7 +5,7 @@ export const Faq = () => {
    return (
       <div className="mt-[6em] p-10 grid bg-slate-100" id='faq'>
          <div className="pt-10">
-            <h2 className="text-4xl font-semibold text-center">
+            <h2 className="text-4xl font-bold text-center">
                Есть сомнения?
             </h2>
             <div className="py-10">

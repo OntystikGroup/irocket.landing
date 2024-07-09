@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
-  title: "iRocket.kz",
+  title: "iRocket",
   description: "Поставим Ваш магазин на 1 место и удержим Вас там. Не упустите шанс увеличить свои продажи и обеспечить стабильный поток заказов.",
   keywords: "irocket, irocket.kz, демпинг, демпинг бот, каспи бот, каспи продажа, аналитика, аналитика каспи товаров"
 };

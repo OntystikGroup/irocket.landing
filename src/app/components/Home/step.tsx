@@ -1,12 +1,12 @@
 import { Button, Card, CardBody, Divider, Link } from '@nextui-org/react'
-import StepImage from '../../home/step.svg';
+import StepImage from '../../home/6.svg';
 import Image from 'next/image';
 
 export const Step = () => {
    return (
       <div className="pt-24 p-10 grid lg:grid-cols-2 justify-center items-center" id='step'>
          <div className="grid justify-center items-center">
-            <h2 className="text-4xl font-semibold text-center">
+            <h2 className="text-4xl font-bold text-center">
                С чего начать?
             </h2>
             <Card className="grid max-w-[400px] mt-10">
@@ -34,7 +34,7 @@ export const Step = () => {
             </Card>
             <Button
                as={Link}
-               color="danger"
+               color="primary"
                variant="shadow"
                href='https://app.irocket.kz/register'
                className="min-w-44 font-semibold mt-10"

@@ -1,23 +1,23 @@
 import { Button, Link } from '@nextui-org/react'
-import MainImage from '../../home/main.svg'
+import MainImage from '../../home/hero.svg'
 import Image from 'next/image';
 
 export const Main = () => {
    return (
-      <div className="grid">
-         <div className="grid p-10 lg:grid-cols-2 bg-slate-100">
+      <div className="grid w-full pt-10 bg-slate-100">
+         <div className="grid px-10 lg:grid-cols-2">
             <div>
-               <Image src={MainImage} alt='Main image' width={500} className="hidden lg:block" />
+               <Image src={MainImage} alt='Main image' height={600} className="hidden lg:block scale-x-[-1]" />
             </div>
             <div className="grid items-center">
                <div className="flex flex-col justify-center items-center gap-10">
-                  <h1 className="text-5xl font-semibold text-start">
+                  <h1 className="text-5xl font-bold text-start">
                      Поставим Ваш магазин <br /> на{' '}
-                     <span className="text-danger">1 место</span> и удержим Вас там
+                     <span className="text-primary">1 место</span> и удержим Вас там
                   </h1>
                   <Button
                      as={Link}
-                     color="danger"
+                     color="primary"
                      variant="shadow"
                      href='https://app.irocket.kz/register'
                      className="min-w-44 font-semibold"

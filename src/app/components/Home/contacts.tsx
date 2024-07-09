@@ -4,10 +4,10 @@ export const Contacts = () => {
    return (
       <div className="mt-[6em] p-10 bg-slate-100" id='contacts'>
          <div className="pt-10">
-            <h2 className="text-4xl font-semibold text-center">
+            <h2 className="text-4xl font-bold text-center">
                Появились вопросы?
             </h2>
-            <p className="text-tiny uppercase font-bold text-center mt-4">
+            <p className="text-tiny uppercase font-semibold text-center mt-4">
                Мы поможем найти ответы! С радостью ответим на все ваши вопросы
             </p>
          </div>
@@ -16,7 +16,7 @@ export const Contacts = () => {
                <Card className="p-5">
                   <CardBody className="gap-4">
                      <a
-                        className="text-2xl font-bold text-danger text-center"
+                        className="text-2xl font-bold text-primary text-center"
                         href="tel:+77477174422"
                      >
                         +7 747 717 4422
@@ -31,7 +31,7 @@ export const Contacts = () => {
                <Card className="p-5">
                   <CardBody className="gap-4">
                      <a
-                        className="text-2xl font-bold text-danger text-center"
+                        className="text-2xl font-bold text-primary text-center"
                         href="mailto:test@test.com"
                      >
                         irocket.kz@mail.ru

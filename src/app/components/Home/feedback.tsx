@@ -1,67 +1,72 @@
-import { Card, CardFooter } from '@nextui-org/react';
-import Feedback1 from '../../home/feedback1.jpeg';
-import Feedback2 from '../../home/feedback2.png';
-import Feedback3 from '../../home/feedback3.png';
-import Image from 'next/image';
+import { Avatar } from '@nextui-org/react';
 
 export const Feedback = () => {
     return (
         <div className="mt-[6em] p-10 bg-slate-100" id="feedback">
             <div className="pt-10">
-                <h2 className="text-4xl font-semibold text-center">
-                    Прочтите, что говорят наши клиенты
+                <h2 className="text-4xl font-bold text-center">
+                    Прочтите, что говорят <span className='text-primary'>наши клиенты</span>
                 </h2>
-                <p className="text-tiny uppercase font-bold text-center mt-4">
+                <p className="text-tiny uppercase font-semibold text-center mt-4">
                     Реальные отзывы наших партнеров. В системе можно оставлять
                     отзывы, которые публикуются здесь
                 </p>
             </div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 pt-10 gap-10 pb-20 md:px-20">
-                <Card isFooterBlurred radius="lg" className="border-none mx-auto flex flex-col items-center w-full max-w-xs">
-                    <Image
-                        alt="Feedback-1"
-                        className="object-cover"
-                        src={Feedback1}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 pt-10 pb-20 md:px-20">
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
                     />
-                    <CardFooter className="justify-between bg-white before:bg-white border-white border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10 flex items-center">
-                        <div className="h-20 overflow-auto py-1 text-center">
-                            Мы с партнером действующие продавцы Kaspi. Сделали лучшую
-                            аналитику для себя и для вас. Людей которые хотят увеличить
-                            свои обороты и получить доступную по деньгам и точную
-                            аналитику
-                        </div>
-                    </CardFooter>
-                </Card>
-                <Card isFooterBlurred radius="lg" className="border-none mx-auto flex flex-col items-center w-full max-w-xs">
-                    <Image
-                        alt="Feedback-2"
-                        className="object-cover"
-                        src={Feedback2}
+                    <p className="text-start flex-grow">Мы с партнером действующие продавцы Kaspi. Сделали лучшую аналитику для себя и для вас.</p>
+                </div>
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
                     />
-                    <CardFooter className="justify-between bg-white before:bg-white border-white border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10 flex items-center">
-                        <div className="h-20 overflow-auto py-1 text-center">
-                            Сәлеметсіздер ме! Менің есімім Мадияр. Мен iRocket сайты
-                            арқылы аналитика жасап жүргеніме біраз уақыт болды.Бұл
-                            аналитика жасау үшін ыңғайлы сайт, барлық беретін
-                            информация 100% нақты көрсетеді және маған өз
-                            продажаларымды өсіруге көмектесті. Барлықтарыңызға кеңес
-                            беремін!
-                        </div>
-                    </CardFooter>
-                </Card>
-                <Card isFooterBlurred radius="lg" className="border-none mx-auto flex flex-col items-center w-full max-w-xs">
-                    <Image
-                        alt="Feedback-3"
-                        className="object-cover"
-                        src={Feedback3}
+                    <p className="text-start flex-grow">Сәлеметсіздер ме! Менің есімім Мадияр. Мен iRocket сайты арқылы аналитика жасап жүргеніме біраз уақыт болды.</p>
+                </div>
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
                     />
-                    <CardFooter className="justify-between bg-white before:bg-white border-white border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10 flex items-center">
-                        <div className="h-14 overflow-auto py-1 text-center">
-                            Irocket самый точный и быстрый сервис в Казахстане.
-                            Рекомендую!
-                        </div>
-                    </CardFooter>
-                </Card>
+                    <p className="text-start flex-grow">Irocket самый точный и быстрый сервис в Казахстане. Рекомендую!</p>
+                </div>
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
+                    />
+                    <p className="text-start flex-grow">Отличный сервис, помогающий нам в работе. Рекомендую!</p>
+                </div>
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
+                    />
+                    <p className="text-start flex-grow">Очень доволен результатами, которые приносит аналитика iRocket.</p>
+                </div>
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
+                    />
+                    <p className="text-start flex-grow">Быстрая и точная аналитика. Отличная поддержка.</p>
+                </div>
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
+                    />
+                    <p className="text-start flex-grow">Сервис действительно помогает увеличивать продажи.</p>
+                </div>
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
+                    />
+                    <p className="text-start flex-grow">Очень удобный сервис, рекомендую всем!</p>
+                </div>
+                <div className="flex gap-2 bg-white p-6 rounded-lg shadow-lg w-full">
+                    <Avatar
+                        className="flex-shrink-0 rounded-full object-cover w-10 h-10"
+                    />
+                    <p className="text-start flex-grow">Отличный сервис, пользуюсь регулярно.</p>
+                </div>
             </div>
         </div>
     );

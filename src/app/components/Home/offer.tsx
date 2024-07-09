@@ -1,57 +1,59 @@
-import { Card, CardFooter, CardBody } from '@nextui-org/react';
-import CardImage1 from '../../home/card1.svg';
-import CardImage2 from '../../home/card2.svg';
-import CardImage3 from '../../home/card3.svg';
-import Image from 'next/image';
+import Image from "next/image";
+import rocket_image from "../../home/15.svg";
 
-export const Offer = () => {
-    return (
-        <div className="md:pt-24 pt-24 p-10" id='offer'>
-            <h2 className="text-4xl font-semibold text-center">
-                Что мы предлагаем?
-            </h2>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 pt-10 gap-5 md:px-20">
-                <Card className="py-4 bg-slate-100 flex flex-col items-center max-w-sm lg:max-w-xs mx-auto">
-                    <CardBody className="overflow-visible py-2 flex justify-center items-center w-full">
-                        <Image src={CardImage1} alt="Img 1" layout="responsive" width={320} height={240} className="object-cover rounded-xl max-w-full" />
-                    </CardBody>
-                    <CardFooter className="pb-0 pt-2 px-4 flex-col justify-center gap-2 text-center">
-                        <h4 className="font-bold text-large text-danger">
-                            Экономим Ваше время
-                        </h4>
-                        <p className="text-tiny uppercase font-bold">
-                            Все процессы автоматизированы, и не требуют вашего внимания
-                        </p>
-                    </CardFooter>
-                </Card>
-                <Card className="py-4 bg-slate-100 flex flex-col items-center max-w-sm lg:max-w-xs mx-auto">
-                    <CardBody className="overflow-visible py-2 flex justify-center items-center w-full">
-                        <Image src={CardImage2} alt="Img 2" layout="responsive" width={320} height={240} className="object-cover rounded-xl max-w-full" />
-                    </CardBody>
-                    <CardFooter className="pb-0 pt-2 px-4 flex-col justify-center gap-2 text-center">
-                        <h4 className="font-bold text-large text-danger">
-                            Обойдем конкурентов
-                        </h4>
-                        <p className="text-tiny uppercase font-bold">
-                            Поможем оставить всех ваших конкурентов далеко позади
-                        </p>
-                    </CardFooter>
-                </Card>
-                <Card className="py-4 bg-slate-100 flex flex-col items-center max-w-sm lg:max-w-xs mx-auto">
-                    <CardBody className="overflow-visible py-2 flex justify-center items-center w-full">
-                        <Image src={CardImage3} alt="Img 3" layout="responsive" width={320} height={240} className="object-cover rounded-xl max-w-full" />
-                    </CardBody>
-                    <CardFooter className="pb-0 pt-2 px-4 flex-col justify-center gap-2 text-center">
-                        <h4 className="font-bold text-large text-danger">
-                            Увеличим продажи
-                        </h4>
-                        <p className="text-tiny uppercase font-bold">
-                            Благодаря iRocket, ваши товары всегда будут на первых
-                            позициях!
-                        </p>
-                    </CardFooter>
-                </Card>
-            </div>
+const Offers = () => {
+  return (
+    <div className="flex flex-row mx-20 mt-10 relative">
+      <div className="flex-1">
+        <h3 className="text-4xl font-bold text-start">
+          <span className="font-stapel font-extrabold">IROCKET</span> полезен{" "}
+          <br />
+          <span className="text-primary">
+            на каждом этапе развития
+          </span> <br /> на KASPI
+        </h3>
+        <div className="relative mb-10 h-[700px]">
+          <div className="absolute inset-0 bg-ellipse-gradient"></div>
+          <svg
+            className="absolute top-0 left-0 w-full h-full"
+            viewBox="0 0 800 700"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M400 50 C450 100, 350 200, 400 250 C450 300, 350 400, 400 450 C450 500, 350 600, 400 650"
+              stroke="#ccc"
+              strokeWidth="2"
+              strokeDasharray="4 4"
+            />
+          </svg>
+          <div className="absolute top-10 left-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
+            <h4 className="text-xl font-bold mb-2">Шаг 1</h4>
+            <p>Описание первого этапа.</p>
+          </div>
+          <div className="absolute top-[150px] right-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
+            <h4 className="text-xl font-bold mb-2">Шаг 2</h4>
+            <p>Описание второго этапа.</p>
+          </div>
+          <div className="absolute top-[290px] left-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
+            <h4 className="text-xl font-bold mb-2">Шаг 3</h4>
+            <p>Описание третьего этапа.</p>
+          </div>
+          <div className="absolute top-[430px] right-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
+            <h4 className="text-xl font-bold mb-2">Шаг 4</h4>
+            <p>Описание четвертого этапа.</p>
+          </div>
+          <div className="absolute top-[570px] left-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
+            <h4 className="text-xl font-bold mb-2">Шаг 5</h4>
+            <p>Описание пятого этапа.</p>
+          </div>
         </div>
-    )
-}
+      </div>
+      <div className="flex-1 flex justify-center items-center">
+        <Image src={rocket_image} height={600} alt="Rocket Image" />
+      </div>
+    </div>
+  );
+};
+
+export default Offers;
