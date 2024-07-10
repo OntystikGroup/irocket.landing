@@ -3,8 +3,8 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 
 export const Faq = () => {
    return (
-      <div className="mt-[6em] p-10 grid bg-slate-100" id='faq'>
-         <div className="pt-10">
+      <div className="mt-[4em] p-10 grid" id='faq'>
+         <div>
             <h2 className="text-4xl font-bold text-center">
                Есть сомнения?
             </h2>

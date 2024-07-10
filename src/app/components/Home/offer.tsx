@@ -29,23 +29,23 @@ const Offers = () => {
           </svg>
           <div className="absolute top-10 left-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
             <h4 className="text-xl font-bold mb-2">Шаг 1</h4>
-            <p>Описание первого этапа.</p>
+            <p className="text-sm">Мониторит и изменяет цены</p>
           </div>
-          <div className="absolute top-[150px] right-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
+          <div className="absolute top-[175px] right-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
             <h4 className="text-xl font-bold mb-2">Шаг 2</h4>
-            <p>Описание второго этапа.</p>
+            <p className="text-sm">Выводит вас в <span className="font-semibold">TOP</span></p>
           </div>
           <div className="absolute top-[290px] left-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
             <h4 className="text-xl font-bold mb-2">Шаг 3</h4>
-            <p>Описание третьего этапа.</p>
+            <p className="text-sm">Благодарит клиента за заказ и оповещает о статусе</p>
           </div>
-          <div className="absolute top-[430px] right-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
+          <div className="absolute top-[443px] right-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
             <h4 className="text-xl font-bold mb-2">Шаг 4</h4>
-            <p>Описание четвертого этапа.</p>
+            <p className="text-sm">Просит оставить отзыв после выдачи товара</p>
           </div>
           <div className="absolute top-[570px] left-[calc(25%-50px)] w-60 p-4 bg-white border border-primary rounded-lg shadow-md">
             <h4 className="text-xl font-bold mb-2">Шаг 5</h4>
-            <p>Описание пятого этапа.</p>
+            <p className="text-sm">Увеличивает рейтинг и продажи </p>
           </div>
         </div>
       </div>
