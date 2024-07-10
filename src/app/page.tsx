@@ -1,13 +1,13 @@
-import { Main } from "@/app/components/home/main";
-import Offers from "@/app/components/home/offer";
-import { Feedback } from "@/app/components/home/feedback";
-import { Step } from "@/app/components/home/step";
-import { Faq } from "@/app/components/home/faq";
-import { Contacts } from "@/app/components/home/contacts";
-import { Footer } from "@/app/components/home/footer";
-import Tools from "@/app/components/home/tools";
-import Statistics from "@/app/components/home/statistics";
-import Partners from "@/app/components/home/partners";
+import { Main } from "next/document";
+import { Contacts } from "./components/home/contacts";
+import { Faq } from "./components/home/faq";
+import { Feedback } from "./components/home/feedback";
+import { Footer } from "./components/home/footer";
+import Offers from "./components/home/offer";
+import Partners from "./components/home/partners";
+import Statistics from "./components/home/statistics";
+import { Step } from "./components/home/step";
+import Tools from "./components/home/tools";
 
 export default function Home() {
   return (
