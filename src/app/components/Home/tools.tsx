@@ -1,15 +1,16 @@
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
 const Tools = () => {
   return (
-    <div className="mx-10 p-10 shadow-lg border rounded-3xl mt-[-32px] z-20 relative bg-white">
-      <h2 className="text-4xl font-bold text-start">
+    <div className="lg:mx-10 mx-4 lg:p-10 p-8 shadow-lg border rounded-3xl mt-[-24px] md:mt-[-32px] z-20 relative bg-white">
+      <h2 className="md:text-4xl text-3xl font-bold text-start">
         Здесь есть инструменты <br /> для {""}
         <span className="text-primary">решения ваших задач</span>
       </h2>
-      <div className="flex gap-4">
-        <div className="mt-8 space-y-2">
-          <h3 className="text-2xl font-bold w-fit p-[6px] text-primary rounded-lg border-b border-b-primary">
+      <div className="flex flex-col lg:flex-row gap-4">
+        <div className="mt-8 space-y-2 flex-1">
+          <h3 className="md:text-2xl text-xl font-bold w-fit p-[6px] text-primary rounded-lg border-b border-b-primary">
             Автоизменение цены/Демпинг
           </h3>
           <p>
@@ -21,8 +22,8 @@ const Tools = () => {
             Подробнее
           </Button>
         </div>
-        <div className="mt-8 space-y-2 w-fit">
-          <h3 className="text-2xl font-bold w-fit p-[6px] text-primary rounded-lg border-b border-b-primary">
+        <div className="mt-8 space-y-2 flex-1">
+          <h3 className="md:text-2xl text-xl font-bold w-fit p-[6px] text-primary rounded-lg border-b border-b-primary">
             Авторассылка и отзывы
           </h3>
           <p>
@@ -30,12 +31,14 @@ const Tools = () => {
             с клиентами. Информируйте их о статусе их заказа, чтобы они были
             проинформированы о доставке и рекомендовали вас друзьям и знакомым.
           </p>
-          <Button color="primary" variant="light">
-            Подробнее
-          </Button>
+          <Link href="/notifications">
+            <Button color="primary" variant="light">
+              Подробнее
+            </Button>
+          </Link>
         </div>
-        <div className="mt-8 space-y-2 w-fit">
-          <h3 className="text-2xl font-bold w-fit p-[6px] text-primary rounded-lg border-b border-b-primary">
+        <div className="mt-8 space-y-2 flex-1">
+          <h3 className="md:text-2xl text-xl font-bold w-fit p-[6px] text-primary rounded-lg border-b border-b-primary">
             Массовая рассылка
           </h3>
           <p>
@@ -44,9 +47,9 @@ const Tools = () => {
             специальных предложениях, способствуя увеличению продаж и повышению
             лояльности.
           </p>
-          <Button color="primary" variant="light">
+          {/* <Button color="primary" variant="light">
             Подробнее
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

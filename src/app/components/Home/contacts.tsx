@@ -2,8 +2,8 @@ import { Card, CardBody } from '@nextui-org/react'
 
 export const Contacts = () => {
    return (
-      <div className="mt-[6em] p-10 bg-slate-100" id='contacts'>
-         <div className="pt-10">
+      <div className="p-10 bg-slate-100" id='contacts'>
+         <div>
             <h2 className="text-4xl font-bold text-center">
                Появились вопросы?
             </h2>

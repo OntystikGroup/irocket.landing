@@ -11,34 +11,43 @@ const Partners = () => {
       <h3 className="text-4xl font-bold text-center mb-8">
         Селлеры <span className="text-primary">нам доверяют</span>
       </h3>
-      <div className="overflow-x-auto no-scrollbar">
-        <div className="flex justify-center space-x-8 p-4">
-          <Image
-            src={Partner1}
-            alt="Partner 1"
-            className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
-          />
-          <Image
-            src={Partner2}
-            alt="Partner 2"
-            className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
-          />
-          <Image
-            src={Partner3}
-            alt="Partner 3"
-            className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
-          />
-          <Image
-            src={Partner4}
-            alt="Partner 4"
-            className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
-          />
-          <Image
-            src={Partner5}
-            alt="Partner 5"
-            className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
-          />
-          
+      <div className="overflow-x-auto no-scrollbar px-4">
+        <div className="flex justify-start space-x-8">
+          <div className="flex-shrink-0">
+            <Image
+              src={Partner1}
+              alt="Partner 1"
+              className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
+            />
+          </div>
+          <div className="flex-shrink-0">
+            <Image
+              src={Partner2}
+              alt="Partner 2"
+              className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
+            />
+          </div>
+          <div className="flex-shrink-0">
+            <Image
+              src={Partner3}
+              alt="Partner 3"
+              className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
+            />
+          </div>
+          <div className="flex-shrink-0">
+            <Image
+              src={Partner4}
+              alt="Partner 4"
+              className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
+            />
+          </div>
+          <div className="flex-shrink-0">
+            <Image
+              src={Partner5}
+              alt="Partner 5"
+              className="h-24 w-auto rounded-2xl bg-white p-6 shadow-lg"
+            />
+          </div>
         </div>
       </div>
     </div>

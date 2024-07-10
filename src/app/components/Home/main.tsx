@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const Main = () => {
    return (
-      <div className="grid w-full pt-10 bg-slate-100">
+      <div className="grid w-full pt-4 lg:pt-10 bg-slate-100">
          <div className="grid px-10 lg:grid-cols-2">
             <div>
                <Image src={MainImage} alt='Main image' height={600} className="hidden lg:block scale-x-[-1]" />
@@ -25,7 +25,7 @@ export const Main = () => {
                   >
                      Попробовать бесплатно
                   </Button>
-                  <p className="font-semibold text-center">
+                  <p className="font-semibold text-center pb-10">
                      Не упустите шанс увеличить свои продажи и обеспечить
                      стабильный поток заказов
                   </p>

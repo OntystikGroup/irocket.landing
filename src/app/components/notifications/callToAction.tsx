@@ -3,7 +3,7 @@ import { Button } from '@nextui-org/react';
 
 const CallToAction = () => {
   return (
-    <div className="flex items-center justify-between p-10 bg-slate-100 rounded-lg pt-10">
+    <div className="flex items-center justify-between px-28 bg-slate-100 rounded-lg pt-10">
       <div className="flex-1 pr-8">
         <h2 className="text-4xl font-bold mb-4">Появились вопросы?</h2>
         <p className="text-xl mb-8">

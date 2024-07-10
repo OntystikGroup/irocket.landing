@@ -43,7 +43,7 @@ export const Step = () => {
                Зарегистрироваться
             </Button>
          </div>
-         <div>
+         <div className='hidden lg:block'>
             <Image src={StepImage} alt='Image Step' width={480} className="object-cover rounded-xl max-w-[30em] hidden lg:block" />
          </div>
       </div>

@@ -12,9 +12,11 @@ import logo from "@/app/assets/home/irocket_logo.svg";
 import Image from "next/image";
 import { useState, MouseEvent } from "react";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const menuItems = [
     { title: "Предложение", toHref: "offer" },
@@ -42,17 +44,17 @@ export default function Header() {
   };
 
   return (
-    <div className="mt-2 fixed top-0 left-0 w-full z-50 px-10">
+    <div className="lg:mt-2 lg:fixed top-0 left-0 lg:w-full z-50 lg:px-10">
       <Navbar
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         isBlurred={false}
-        className="justify-between lg:px-10 lg:bg-white lg:border lg:rounded-full lg:py-2 lg:flex lg:items-center lg:justify-between shadow-sm"
+        className="justify-between lg:px-10 lg:bg-white lg:border lg:rounded-full lg:py-2 lg:flex lg:items-center lg:justify-between lg:shadow-sm"
         maxWidth="full"
       >
         <NavbarContent className="pr-3">
           <div className="grid">
-            <div className="flex items-center w-fit">
+            <div className="flex items-center w-fit cursor-pointer" onClick={() => router.push('/')}>
               <Image
                 src={logo}
                 alt="Logo"

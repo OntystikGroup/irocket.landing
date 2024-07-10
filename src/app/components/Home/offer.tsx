@@ -3,7 +3,7 @@ import rocket_image from "@/app/assets/home/15.svg";
 
 const Offers = () => {
   return (
-    <div className="flex flex-row mx-20 mt-10 relative">
+    <div className="flex flex-row mx-4 lg:mx-20 mt-10 relative">
       <div className="flex-1">
         <h3 className="text-4xl font-bold text-start">
           <span className="font-stapel font-extrabold">IROCKET</span> полезен{" "}
@@ -49,7 +49,7 @@ const Offers = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex justify-center items-center">
+      <div className="hidden flex-1 lg:flex justify-center items-center">
         <Image src={rocket_image} height={600} alt="Rocket Image" />
       </div>
     </div>
