@@ -1,5 +1,5 @@
 import Image from "next/image";
-import rocket_image from "../../home/15.svg";
+import rocket_image from "@/app/assets/home/15.svg";
 
 const Offers = () => {
   return (

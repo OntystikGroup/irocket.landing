@@ -8,7 +8,7 @@ import {
   NavbarMenuItem,
   Button,
 } from "@nextui-org/react";
-import logo from "../../home/irocket_logo.svg";
+import logo from "@/app/assets/home/irocket_logo.svg";
 import Image from "next/image";
 import { useState, MouseEvent } from "react";
 import Link from "next/link";

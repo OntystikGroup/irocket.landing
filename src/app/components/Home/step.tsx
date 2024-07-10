@@ -1,5 +1,5 @@
 import { Button, Card, CardBody, Divider, Link } from '@nextui-org/react'
-import StepImage from '../../home/6.svg';
+import StepImage from '@/app/assets/home/6.svg';
 import Image from 'next/image';
 
 export const Step = () => {

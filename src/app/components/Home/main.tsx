@@ -1,5 +1,5 @@
 import { Button, Link } from '@nextui-org/react'
-import MainImage from '../../home/hero.svg'
+import MainImage from '@/app/assets/home/hero.svg'
 import Image from 'next/image';
 
 export const Main = () => {
