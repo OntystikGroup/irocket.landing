@@ -3,23 +3,25 @@ import { Button } from '@nextui-org/react';
 
 const CallToAction = () => {
   return (
-    <div className="flex items-center justify-between px-28 bg-slate-100 rounded-lg pt-10">
-      <div className="flex-1 pr-8">
-        <h2 className="text-4xl font-bold mb-4">Появились вопросы?</h2>
-        <p className="text-xl mb-8">
+    <div className="flex flex-col lg:flex-row-reverse items-center justify-between px-4 sm:px-10 lg:px-28 bg-slate-100 rounded-lg py-10">
+      <div className="flex-1 flex justify-center items-center mb-8 lg:mb-0">
+        <img src='/3d_logo.png' alt="CTA Image" className="h-40 sm:h-60 lg:h-80" />
+      </div>
+      <div className="flex-1 lg:pl-8 text-center lg:text-left">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Появились вопросы?</h2>
+        <p className="text-lg sm:text-xl mb-8">
           Оставь заявку на онлайн-встречу или звонок, и наши менеджеры свяжутся с тобой
         </p>
-        <div className="flex gap-4">
-          <Button className="text-white py-4 px-8 rounded-lg" variant='shadow' color='primary'>
-            Заказать звонок
+        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <Button className="text-white py-3 px-6 sm:py-4 sm:px-8 rounded-lg" variant='shadow' color='primary'>
+            <a href="tel:+77477174422">
+              Заказать звонок
+            </a>
           </Button>
-          <Button className="py-4 px-8 rounded-lg" variant='bordered' color='primary'>
-            Онлайн-встреча
+          <Button className="py-3 px-6 sm:py-4 sm:px-8 rounded-lg" variant='bordered' color='primary'>
+            WhatsApp
           </Button>
         </div>
-      </div>
-      <div className="flex-1 flex justify-center items-center py-20">
-        <img src='/3d_logo.png' alt="CTA Image" className=" h-80" />
       </div>
     </div>
   );

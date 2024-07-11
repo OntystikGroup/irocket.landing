@@ -7,12 +7,12 @@ import Image from "next/image";
 
 const Partners = () => {
   return (
-    <div className="bg-slate-100 py-10">
+    <div className="bg-slate-100 pt-10">
       <h3 className="text-4xl font-bold text-center mb-8">
         Селлеры <span className="text-primary">нам доверяют</span>
       </h3>
       <div className="overflow-x-auto no-scrollbar px-4">
-        <div className="flex justify-start space-x-8">
+        <div className="flex justify-center space-x-8 pb-10">
           <div className="flex-shrink-0">
             <Image
               src={Partner1}

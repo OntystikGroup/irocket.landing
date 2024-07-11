@@ -10,13 +10,25 @@ import {
 } from "@nextui-org/react";
 import logo from "@/app/assets/home/irocket_logo.svg";
 import Image from "next/image";
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [height, setHeight] = useState('2.5rem');
   const router = useRouter();
+
+  useEffect(() => {
+    const updateHeight = () => {
+      setHeight(window.innerWidth < 768 ? '4rem' : '2.5rem');
+    };
+
+    updateHeight(); // Initial call
+    window.addEventListener('resize', updateHeight);
+
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
 
   const menuItems = [
     { title: "Предложение", toHref: "offer" },
@@ -46,22 +58,23 @@ export default function Header() {
   return (
     <div className="lg:mt-2 lg:fixed top-0 left-0 lg:w-full z-50 lg:px-10">
       <Navbar
+        height={height}
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         isBlurred={false}
-        className="justify-between lg:px-10 lg:bg-white lg:border lg:rounded-full lg:py-2 lg:flex lg:items-center lg:justify-between lg:shadow-sm"
+        className="justify-between lg:px-10 lg:border lg:rounded-full lg:py-2 lg:flex lg:items-center lg:justify-between lg:shadow-sm glassmorphism"
         maxWidth="full"
       >
-        <NavbarContent className="pr-3">
+        <NavbarContent className="pr-3 h-fit">
           <div className="grid">
             <div className="flex items-center w-fit cursor-pointer" onClick={() => router.push('/')}>
               <Image
                 src={logo}
                 alt="Logo"
-                className="md:h-12 mr-2 object-contain w-fit h-10"
+                className="md:h-8 mr-2 object-contain w-fit h-8"
               />
               <div className="flex flex-col">
-                <p className="font-semibold md:text-4xl text-2xl md:tracking-wider font-stapel">
+                <p className="font-semibold md:text-2xl text-2xl md:tracking-wider font-stapel">
                   IROCKET
                 </p>
               </div>
@@ -69,7 +82,7 @@ export default function Header() {
           </div>
         </NavbarContent>
 
-        <NavbarContent className="hidden lg:flex gap-4" justify="center">
+        <NavbarContent className="hidden lg:flex gap-4 h-fit" justify="center">
           {menuItems.slice(0, 6).map((item, index) => (
             <NavbarItem key={`${item.title}-${index}`}>
               <Link
@@ -83,7 +96,7 @@ export default function Header() {
           ))}
         </NavbarContent>
 
-        <NavbarContent justify="end">
+        <NavbarContent justify="end" className="h-fit">
           <NavbarItem className="md:ml-10">
             <Button
               href="https://app.irocket.kz/login"
@@ -101,7 +114,7 @@ export default function Header() {
               color="primary"
               href="https://app.irocket.kz/register"
               variant="ghost"
-              className="font-semibold hover:bg-danger hover:text-white hidden md:flex"
+              className="font-semibold hidden md:flex"
             >
               Попробовать
             </Button>
