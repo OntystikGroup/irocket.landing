@@ -18,9 +18,11 @@ const Tools = () => {
             Kaspi.kz, чтобы оставаться конкурентоспособными и привлекать больше
             покупателей.
           </p>
-          <Button color="primary" variant="light">
-            Подробнее
-          </Button>
+          <Link href="/dumping">
+            <Button color="primary" variant="light">
+              Подробнее
+            </Button>
+          </Link>
         </div>
         <div className="mt-8 space-y-2 flex-1">
           <h3 className="md:text-2xl text-xl font-bold w-fit p-[6px] text-primary rounded-lg border-b border-b-primary">
