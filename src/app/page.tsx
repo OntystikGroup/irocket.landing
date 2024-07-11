@@ -1,26 +1,29 @@
-import { Main } from "./components/Home/main";
-import { Cards } from "./components/Home/card";
-import { Offer } from "./components/Home/offer";
-import { Feedback } from "./components/Home/feedback";
-import { Step } from "./components/Home/step";
-import { Faq } from "./components/Home/faq";
-import { Team } from "./components/Home/team";
-import { Contacts } from "./components/Home/contacts";
-import Header from "./components/Home/Header";
-import { Footer } from "./components/Home/footer";
+import { Main } from "../components/home/main";
+import Offers from "../components/home/offer";
+import { Feedback } from "../components/home/feedback";
+import { Step } from "../components/home/step";
+import { Faq } from "../components/home/faq";
+import { Contacts } from "../components/home/contacts";
+import { Footer } from "../components/home/footer";
+import Tools from "../components/home/tools";
+import Statistics from "../components/home/statistics";
+import Partners from "../components/home/partners";
+import Header from "@/components/home/Header";
+import CallToAction from "@/components/notifications/callToAction";
 
 export default function Home() {
   return (
     <>
       <Header />
       <Main />
-      <Cards />
-      <Offer />
+      <Tools />
+      <Offers />
       <Feedback />
       <Step />
+      <Statistics />
       <Faq />
-      <Team />
-      <Contacts />
+      <Partners />
+      <CallToAction />
       <Footer />
     </>
   );
