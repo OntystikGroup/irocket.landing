@@ -56,7 +56,7 @@ export default function Header() {
   };
 
   return (
-    <div className="lg:mt-2 lg:fixed top-0 left-0 lg:w-full z-50 lg:px-10">
+    <div className="lg:mt-2 lg:fixed sticky top-0 left-0 lg:w-full z-50 lg:px-10">
       <Navbar
         height={height}
         isMenuOpen={isMenuOpen}
