@@ -62,7 +62,7 @@ export default function Header() {
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         isBlurred={false}
-        className="justify-between lg:px-10 lg:border lg:rounded-full lg:py-2 lg:flex lg:items-center lg:justify-between lg:shadow-sm glassmorphism"
+        className="justify-between lg:px-10 lg:border lg:rounded-full lg:py-2 lg:flex lg:items-center lg:justify-between lg:shadow-sm lg:glassmorphism"
         maxWidth="full"
       >
         <NavbarContent className="pr-3 h-fit">
