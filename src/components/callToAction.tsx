@@ -21,7 +21,7 @@ const CallToAction = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a href="tel:+77477174422">
             <Button
-              className="text-white py-3 px-6 sm:py-4 sm:px-8 rounded-lg"
+              className="text-white py-3 px-6 sm:py-4 sm:px-8 rounded-lg w-full"
               variant="shadow"
               color="primary"
             >
@@ -30,7 +30,7 @@ const CallToAction = () => {
           </a>
           <a href="https://wa.me/77477174422">
             <Button
-              className="py-3 px-6 sm:py-4 sm:px-8 rounded-lg"
+              className="py-3 px-6 sm:py-4 sm:px-8 rounded-lg w-full"
               variant="bordered"
               color="success"
             >
