@@ -8,7 +8,7 @@ const Statistics = () => {
     { value: '4.7+', description: 'минимальный рейтинг наших продавцов' },
     { value: '1/3', description: 'оставляют отзывы' },
     { value: '10', description: 'минут для подключения' },
-    { value: '200+', description: 'активных клиентов' },
+    { value: '1М+', description: 'сообщений отправлено' },
   ];
 
   const dumpings = [

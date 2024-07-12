@@ -11,8 +11,8 @@ const Partners = () => {
       <h3 className="text-4xl font-bold text-center mb-8">
         Селлеры <span className="text-primary">нам доверяют</span>
       </h3>
-      <div className="overflow-x-auto no-scrollbar px-4">
-        <div className="flex justify-center space-x-8 pb-10">
+      <div className="overflow-x-auto no-scrollbar">
+        <div className="flex justify-start lg:justify-center space-x-8 px-4 pb-10">
           <div className="flex-shrink-0">
             <Image
               src={Partner1}

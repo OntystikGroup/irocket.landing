@@ -21,7 +21,7 @@ const Opportunities = () => {
       icon: <ArrowUpIcon />,
       title: "Мониторит цены вместо тебя",
       description:
-        "Забудь о ручном отслеживании цен. Инструмент оценивает карточки конкурентов и помогает всегда оставаться в рынке.",
+        "Забудь о ручном отслеживании цен. Инструмент оценивает цены конкурентов и помогает всегда оставаться в рынке.",
     },
     // {
     //   icon: <YourIconComponent />,
@@ -36,7 +36,7 @@ const Opportunities = () => {
         Возможности <span className="text-primary">Демпинг бота</span>
       </h1>
       <div className="flex flex-col lg:flex-row gap-6">
-        <div className="flex justify-center items-center lg:items-start mt-10 lg:mt-0 w-full lg:w-5/12">
+        <div className="flex justify-center items-center lg:items-start mt-10 w-full lg:w-5/12">
           <img src={photo.src} alt="3D Dumping" className="lg:h-64 w-auto mx-auto lg:mx-0" />
         </div>
         <div className="flex flex-col gap-4 w-full lg:w-7/12">
