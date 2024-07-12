@@ -2,7 +2,7 @@ import Main from "@/components/dumping/main";
 import Opportunities from "@/components/dumping/opportunities";
 import PriceManagement from "@/components/dumping/priceManagement";
 import { Footer } from "@/components/home/footer";
-import Header from "@/components/home/Header";
+import Header from "@/components/Header";
 import CallToAction from "@/components/callToAction";
 
 const DumpingPage = () => {
