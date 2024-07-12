@@ -1,6 +1,6 @@
-import { Button } from '@nextui-org/react';
-import Image from 'next/image';
-import dumpingPhoto from '@/app/assets/dumping/8.svg';
+import { Button } from "@nextui-org/react";
+import Image from "next/image";
+import dumpingPhoto from "@/app/assets/dumping/8.svg";
 
 const Main = () => {
   return (
@@ -10,11 +10,20 @@ const Main = () => {
           Автоизменение цены/Демпинг
         </h1>
         <p className="text-base sm:text-lg mt-4">
-          Автоматическое регулирование цен на товары в вашем магазине на Kaspi.kz, чтобы оставаться конкурентоспособными и привлекать больше покупателей.
+          Автоматическое регулирование цен на товары в вашем магазине на
+          Kaspi.kz, чтобы оставаться конкурентоспособными и привлекать больше
+          покупателей.
         </p>
-        <Button className="mt-6 self-start px-10 sm:px-14 lg:px-16 xl:px-20 w-full md:w-auto" color="primary" variant='shadow' size='lg'>
-          Узнать больше
-        </Button>
+        <a href="https://app.irocket.kz/register">
+          <Button
+            className="mt-6 self-start px-10 sm:px-14 lg:px-16 xl:px-20 w-full md:w-auto"
+            color="primary"
+            variant="shadow"
+            size="lg"
+          >
+            Узнать больше
+          </Button>
+        </a>
       </div>
       <div className="flex justify-center items-center lg:items-end mt-10 lg:mt-0 relative lg:mb-20">
         <Image
