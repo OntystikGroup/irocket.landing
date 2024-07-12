@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import {
   Navbar,
@@ -16,23 +16,23 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/app/assets/home/irocket_logo.svg";
-import { useRouter } from 'next/navigation';
-import { ChevronIcon } from "../icons/Chevron.icon";
+import { useRouter } from "next/navigation";
+import { ChevronIcon } from "./icons/Chevron.icon";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [height, setHeight] = useState('2.5rem');
+  const [height, setHeight] = useState("2.5rem");
   const router = useRouter();
 
   useEffect(() => {
     const updateHeight = () => {
-      setHeight(window.innerWidth < 768 ? '4rem' : '2.5rem');
+      setHeight(window.innerWidth < 768 ? "4rem" : "2.5rem");
     };
 
     updateHeight(); // Initial call
-    window.addEventListener('resize', updateHeight);
+    window.addEventListener("resize", updateHeight);
 
-    return () => window.removeEventListener('resize', updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
   const menuItems = [
@@ -74,7 +74,10 @@ export default function Header() {
         maxWidth="full"
       >
         <NavbarContent className="pr-3 h-fit">
-          <div className="flex items-center w-fit cursor-pointer" onClick={() => router.push('/')}>
+          <div
+            className="flex items-center w-fit cursor-pointer"
+            onClick={() => router.push("/")}
+          >
             <Image
               src={logo}
               alt="Logo"
@@ -198,7 +201,9 @@ export default function Header() {
           }
         />
 
-        <NavbarMenu> {/* Align menu to the left for mobile */}
+        <NavbarMenu>
+          {" "}
+          {/* Align menu to the left for mobile */}
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.title}-${index}`}>
               {item.dropdown ? (
@@ -212,22 +217,22 @@ export default function Header() {
                       {item.title}
                     </Button>
                   </DropdownTrigger>
-                  <DropdownMenu
-                    onAction={(key) => router.push(`/${key}`)}
-                  >
-                    <DropdownItem key='dumping' className="font-semibold hover:text-primary">
-                  
-                        Автоизменение цены/Демпинг
+                  <DropdownMenu onAction={(key) => router.push(`/${key}`)}>
+                    <DropdownItem
+                      key="dumping"
+                      className="font-semibold hover:text-primary"
+                    >
+                      Автоизменение цены/Демпинг
                     </DropdownItem>
-                    <DropdownItem key='notifications'>
-                        Авторассылка
+                    <DropdownItem key="notifications">
+                      Авторассылка
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               ) : (
                 <a
                   className="w-full cursor-pointer font-meduim text-sm"
-                  // onClick={(e) => handleLinkClick(e, item.toHref)}
+                  onClick={(e) => handleLinkClick(e, item.toHref)}
                   key={item.toHref}
                 >
                   {item.title}
