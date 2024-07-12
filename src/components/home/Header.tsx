@@ -212,29 +212,23 @@ export default function Header() {
                       {item.title}
                     </Button>
                   </DropdownTrigger>
-                  <DropdownMenu>
-                    <DropdownItem>
-                      <Link
-                        href="/dumping"
-                        className="font-semibold hover:text-primary"
-                      >
+                  <DropdownMenu
+                    onAction={(key) => router.push(`/${key}`)}
+                  >
+                    <DropdownItem key='dumping' className="font-semibold hover:text-primary">
+                  
                         Автоизменение цены/Демпинг
-                      </Link>
                     </DropdownItem>
-                    <DropdownItem>
-                      <Link
-                        href="/notifications"
-                        className="font-semibold hover:text-primary"
-                      >
+                    <DropdownItem key='notifications'>
                         Авторассылка
-                      </Link>
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               ) : (
                 <a
                   className="w-full cursor-pointer font-meduim text-sm"
-                  onClick={(e) => handleLinkClick(e, item.toHref)}
+                  // onClick={(e) => handleLinkClick(e, item.toHref)}
+                  key={item.toHref}
                 >
                   {item.title}
                 </a>
