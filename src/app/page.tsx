@@ -9,7 +9,7 @@ import Tools from "../components/home/tools";
 import Statistics from "../components/home/statistics";
 import Partners from "../components/home/partners";
 import Header from "@/components/home/Header";
-import CallToAction from "@/components/notifications/callToAction";
+import CallToAction from "@/components/callToAction";
 
 export default function Home() {
   return (

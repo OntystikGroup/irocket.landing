@@ -3,7 +3,7 @@ import Opportunities from "@/components/dumping/opportunities";
 import PriceManagement from "@/components/dumping/priceManagement";
 import { Footer } from "@/components/home/footer";
 import Header from "@/components/home/Header";
-import CallToAction from "@/components/notifications/callToAction";
+import CallToAction from "@/components/callToAction";
 
 const DumpingPage = () => {
   return (
@@ -15,7 +15,7 @@ const DumpingPage = () => {
       <CallToAction />
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default DumpingPage;

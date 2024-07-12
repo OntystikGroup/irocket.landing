@@ -1,4 +1,5 @@
-"use client";
+"use client"
+import { useState, useEffect } from "react";
 import {
   Navbar,
   NavbarContent,
@@ -7,12 +8,16 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Button,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
 } from "@nextui-org/react";
-import logo from "@/app/assets/home/irocket_logo.svg";
 import Image from "next/image";
-import { useState, MouseEvent, useEffect } from "react";
 import Link from "next/link";
+import logo from "@/app/assets/home/irocket_logo.svg";
 import { useRouter } from 'next/navigation';
+import { ChevronIcon } from "../icons/Chevron.icon";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,11 +36,10 @@ export default function Header() {
   }, []);
 
   const menuItems = [
-    { title: "Предложение", toHref: "offer" },
-    { title: "Отзывы", toHref: "feedback" },
+    { title: "Инструменты", toHref: "offer", dropdown: true },
     { title: "Как начать", toHref: "step" },
+    { title: "Отзывы", toHref: "feedback" },
     { title: "FAQ", toHref: "faq" },
-    { title: "Наша команда", toHref: "team" },
     { title: "Контакты", toHref: "contacts" },
   ];
 
@@ -47,12 +51,16 @@ export default function Header() {
   };
 
   const handleLinkClick = (
-    e: MouseEvent<HTMLAnchorElement>,
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
     toHref: string
   ) => {
     e.preventDefault();
-    scrollToSection(toHref);
-    setIsMenuOpen(false); // Collapse the burger menu
+    if (toHref === "offer") {
+      setIsMenuOpen(!isMenuOpen);
+    } else {
+      router.push(`/#${toHref}`);
+      setIsMenuOpen(false); // Collapse the burger menu
+    }
   };
 
   return (
@@ -66,32 +74,63 @@ export default function Header() {
         maxWidth="full"
       >
         <NavbarContent className="pr-3 h-fit">
-          <div className="grid">
-            <div className="flex items-center w-fit cursor-pointer" onClick={() => router.push('/')}>
-              <Image
-                src={logo}
-                alt="Logo"
-                className="md:h-8 mr-2 object-contain w-fit h-8"
-              />
-              <div className="flex flex-col">
-                <p className="font-semibold md:text-2xl text-2xl md:tracking-wider font-stapel">
-                  IROCKET
-                </p>
-              </div>
+          <div className="flex items-center w-fit cursor-pointer" onClick={() => router.push('/')}>
+            <Image
+              src={logo}
+              alt="Logo"
+              className="md:h-8 mr-2 object-contain w-fit h-8"
+            />
+            <div className="flex flex-col">
+              <p className="font-semibold md:text-2xl text-2xl md:tracking-wider font-stapel">
+                IROCKET
+              </p>
             </div>
           </div>
         </NavbarContent>
 
         <NavbarContent className="hidden lg:flex gap-4 h-fit" justify="center">
-          {menuItems.slice(0, 6).map((item, index) => (
+          {menuItems.map((item, index) => (
             <NavbarItem key={`${item.title}-${index}`}>
-              <Link
-                className="font-semibold hover:text-primary"
-                href={`#${item.toHref}`}
-                onClick={(e) => handleLinkClick(e, item.toHref)}
-              >
-                {item.title}
-              </Link>
+              {item.dropdown ? (
+                <Dropdown>
+                  <DropdownTrigger>
+                    <Button
+                      color="primary"
+                      variant="light"
+                      className="p-0 bg-transparent data-[hover=true]:bg-transparent transition-transform duration-300 ease-in-out"
+                      endContent={<ChevronIcon />}
+                      radius="sm"
+                    >
+                      {item.title}
+                    </Button>
+                  </DropdownTrigger>
+                  <DropdownMenu>
+                    <DropdownItem>
+                      <Link
+                        href="/dumping"
+                        className="font-semibold hover:text-primary"
+                      >
+                        Автоизменение цены/Демпинг
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link
+                        href="/notifications"
+                        className="font-semibold hover:text-primary"
+                      >
+                        Авторассылка
+                      </Link>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+              ) : (
+                <a
+                  className="font-meduim text-sm hover:text-primary cursor-pointer"
+                  onClick={(e) => handleLinkClick(e, item.toHref)}
+                >
+                  {item.title}
+                </a>
+              )}
             </NavbarItem>
           ))}
         </NavbarContent>
@@ -159,16 +198,41 @@ export default function Header() {
           }
         />
 
-        <NavbarMenu>
+        <NavbarMenu> {/* Align menu to the left for mobile */}
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.title}-${index}`}>
-              <Link
-                className="w-full"
-                href={`#${item.toHref}`}
-                onClick={(e) => handleLinkClick(e, item.toHref)}
-              >
-                {item.title}
-              </Link>
+              {item.dropdown ? (
+                <Dropdown>
+                  <DropdownTrigger>
+                    <Button
+                      color="primary"
+                      variant="light"
+                      className="w-fit p-0"
+                    >
+                      {item.title}
+                    </Button>
+                  </DropdownTrigger>
+                  <DropdownMenu
+                    onAction={(key) => router.push(`/${key}`)}
+                  >
+                    <DropdownItem key='dumping' className="font-semibold hover:text-primary">
+                  
+                        Автоизменение цены/Демпинг
+                    </DropdownItem>
+                    <DropdownItem key='notifications'>
+                        Авторассылка
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+              ) : (
+                <a
+                  className="w-full cursor-pointer font-meduim text-sm"
+                  // onClick={(e) => handleLinkClick(e, item.toHref)}
+                  key={item.toHref}
+                >
+                  {item.title}
+                </a>
+              )}
             </NavbarMenuItem>
           ))}
           <NavbarMenuItem>
