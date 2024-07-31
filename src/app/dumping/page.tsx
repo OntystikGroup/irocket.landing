@@ -1,7 +1,7 @@
 import Main from "@/components/dumping/main";
 import Opportunities from "@/components/dumping/opportunities";
 import PriceManagement from "@/components/dumping/priceManagement";
-import { Footer } from "@/components/home/footer";
+import { Footer } from "@/components/footer";
 import Header from "@/components/Header";
 import CallToAction from "@/components/callToAction";
 

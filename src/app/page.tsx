@@ -4,7 +4,7 @@ import { Feedback } from "../components/home/feedback";
 import { Step } from "../components/home/step";
 import { Faq } from "../components/home/faq";
 import { Contacts } from "../components/home/contacts";
-import { Footer } from "../components/home/footer";
+import { Footer } from "../components/footer";
 import Tools from "../components/home/tools";
 import Statistics from "../components/home/statistics";
 import Partners from "../components/home/partners";
