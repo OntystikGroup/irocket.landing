@@ -3,7 +3,7 @@ import Benefits from "../../components/notifications/benefits";
 import CallToAction from "../../components/callToAction";
 import HowItWorks from "../../components/notifications/howItWorks";
 import Main from "../../components/notifications/main";
-import { Footer } from "@/components/home/footer";
+import { Footer } from "@/components/footer";
 
 const NotificationsPage = () => {
   return (
